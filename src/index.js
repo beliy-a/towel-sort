@@ -5,15 +5,11 @@ module.exports = function towelSort(matrix) {
   const result = [];
 
   matrix.forEach((arr, i) => {
-    arr.sort((a, b) => a - b);
-
-    if (i % 2 == 1) {
+    if (i % 2) {
       arr.reverse();
-      result.push(...arr);
-    } else {
-      result.push(...arr);
     }
 
+    result.push(...arr);
   });
 
   return result;
